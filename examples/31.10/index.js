@@ -54,4 +54,4 @@ let c = 59;
 let z = 5;
 let x = 3;
 let total = ((a*b) / c) / (z - 3);
-console.log(total % 2)
+console.log(total % 2);

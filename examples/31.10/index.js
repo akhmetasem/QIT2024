@@ -48,10 +48,26 @@
  //let total = ((a + b) * c - d / e);
  //console.log(total);
 
-let a =  45;
-let b = 47;
-let c = 59;
-let z = 5;
-let x = 3;
-let total = ((a*b) / c) / (z - 3);
-console.log(total % 2);
+//let a =  45;
+//let b = 47;
+//let c = 59;
+//let z = 5;
+//let x = 3;
+//let total = ((a*b) / c) / (z - 3);
+//console.log(total % 2);
+
+//var formula = p = (a + b) * 2
+//var formula = F = m * g
+
+//var x = 105; // tagaindau
+//var y = 40; 
+// salystyru operatory
+//if (x > y) {
+ // console.log(x,"Ulkenirek")
+//}
+//else {
+  //console.log(y, "Ulkenirek")
+//}
+
+
+

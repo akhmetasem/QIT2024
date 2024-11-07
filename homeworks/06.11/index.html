@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let gameplay = prompt("Enter your name");
+        
+       
+        var firstGame = prompt(gameplay + ", You are in the forest. Do you go left or right?");
+        
+        if(firstGame.toLowerCase() == 'left') {
+            alert("Go to the left, there you will find a small cave!");
+        } else if (firstGame.toLowerCase() == 'right') {
+            alert("Go to the right, there you will find people who can help you! But you have to cross the river...");
+        } else {
+            alert("You must make at least one choice!");
+        }
+
+       
+        var secondGame = prompt("You see a river. Do you swim or boat on a raft?");
+        
+        if (secondGame.toLowerCase() == "swim"){
+            alert("You have crossed the water, hold on so you don't feel the depth!");
+        } else if (secondGame.toLowerCase() == "boat") {
+            alert("You have transformed yourself into a toon and explored a new complex.");
+        } else {
+            alert("You must make at least one choice!");
+        }
+
+        
+        var thirdGame = prompt("You have found a treasure chest! Are you going to open it or not?");
+        
+        if (thirdGame.toLowerCase() == "open") {
+            alert("You opened the treasure and saw a chest full of gold! Congratulations, you've found a hidden treasure!");
+        } else if (thirdGame.toLowerCase() == "i don't touch") {
+            alert("You didn't touch the treasure, but continued your journey safely and peacefully. Every choice determines your destiny.");
+        } else {
+            alert("Error! You can only answer 'open' or 'I don't touch'.");
+        }
+
+        alert(gameplay + ", your adventure is over. Depending on your choices, you'll get different results. Good luck!");
+    </script>
+</body>
+</html>

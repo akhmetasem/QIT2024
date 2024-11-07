@@ -24,50 +24,81 @@
 
 
        let order = ""
-       var burger = prompt("Burger tandaniz");
+       let total = 0;
+       var burger = prompt("Burger tandaniz" + '\n' + 'A)Kurenii 500tg ' + '\n' +'B)Baranina 700tg' + '\n' + 'C)Etsiz 300tg ');
        switch (burger) {
         case "A": 
         order += "\n Kurennii "
+        total += 500
         break;
         case "B": 
         order +="\n Baranina "
+        total +=700
         break;
         case "C": 
         order += "Etsiz "
+        total += 300
         break;
         default: 
-        alert("Qate");
+       
        }
-       var susin = prompt("Susin tandaniz");
+       var susin = prompt("Susin tandaniz" + '\n' + 'A)Cola 300tg' + '\n' + 'B)Fanta 700tg' + '\n' + 'Sprite 350tg');
        switch (susin) {
         case "A": 
         order += "\n Cola "
+        total += 300
         break;
         case "B": 
         order +="\n Fanta "
+        total += 350
         break;
         case "C": 
         order += "Sprite "
+        total += 400
         break;
         default: 
-        alert("Qate");
+    
        }
-       
-       var souce= prompt("Souce tandaniz ");
+       var Fri= prompt("Fri tandaniz" + '\n' + 'A)Small 200tg ' + '\n' + 'B)Medium 300tg' + '\n' + 'C)Lange 350tg');
+       switch (souce) {
+        case "A": 
+        order += "\n Small "
+        total += 200
+        break;
+        case "B": 
+        order +="\n Medium"
+        total += 300
+        break;
+        case "C": 
+        order += "Large"
+        total += 350
+        break;
+        default: 
+        
+       }
+       var souce= prompt("Souce tandaniz" + '\n' + 'A)ketchup 200tg' + '\n' + 'C)Kerek emes 0tg' + '\n' + 'Chisnochnii 200tg' );
        switch (souce) {
         case "A": 
         order += "\n Ketchup "
+        total += 200
         break;
         case "B": 
         order +="\n chisnochnii"
+        total += 200
         break;
         case "C": 
-        order += "Kerek emes "
+        order += "Kerek emes  "
+        total += 0
         break;
         default: 
-        alert("Qate");
+       
        }
-       alert(order)
+
+       
+       alert(order + '\n' + total)
+       var name = prompt("Enter your name");
+       var summa= prompt("000000tg")
+       
 
 
 

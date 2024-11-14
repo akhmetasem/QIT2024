@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1tapsirma
+        for (let i = 1; i <= 100; i++) {
+        if (i % 2 === 0) {
+        continue;
+      }
+       if (i % 3 === 0 && i % 5 === 0) {
+         alert("FizzBuzz");
+         console.log("FizzBuzz");
+      } 
+   
+        else if (i % 3 === 0) {
+        alert("Fizz");
+        console.log("Fizz");
+      } 
+        else if (i % 5 === 0) {
+         alert("Buzz");
+        console.log("Buzz");
+     } 
+        else {
+        console.log(i);
+     }
+}
+         //2tapsirma
+         let score =6;
+
+        do{
+       score++
+    var question = +prompt("Adam deyesinde kansha suiek bar?")
+    } while (question < 260)
+
+        do{
+      score++
+    var question = +prompt("Degitiminimi kansha juptan turadi?")
+    } while (question < 2)
+
+        do{
+     score++
+     var question = +prompt("Adam denesinde kansha scapula bar?")
+     } while (question < 2)
+
+   alert("Duris " + score);
+        //3tapsirma
+        let start = +prompt("Бастапқы санды енгізіңіз:");
+        let end = +prompt("Соңғы санды енгізіңіз:");
+        let num1 = 1; 
+        let num2 = 1; 
+        let i = start;
+
+        do {
+        if (i % 4 === 0) {
+            num1 *= i; 
+        }
+        if (i % 7 === 0) {
+            num2 *= i; 
+        }
+        i++;
+        } while (i <= end);
+ 
+ 
+        alert("4-ке қалдықсыз бөлінетін сандардың көбейтіндісі: " + num1);
+        alert("7-ге қалдықсыз бөлінетін сандардың көбейтіндісі: " + num2);
+    </script>
+    
+</body>
+</html>

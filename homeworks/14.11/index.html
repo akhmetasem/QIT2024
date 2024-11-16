@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var Password = "amjilt_the_best";
+         var Duriszhauap = 5;
+
+        while (Duriszhauap > 0) {
+        var enPassword = prompt("Парольді енгізіңіз: ");
+       if (enPassword === Password) {
+        alert("Пароль дұрыс!");
+        break; 
+       } else {
+        Duriszhauap -= 1;  
+        alert("Қате пароль! Қалған мүмкіндіктер: " + Duriszhauap);
+       }
+
+        if (Duriszhauap === 0) {
+        alert("Too many attempts");
+       }
+       }
+    </script>
+    
+</body>
+</html>

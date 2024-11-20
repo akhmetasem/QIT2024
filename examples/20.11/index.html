@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //return bolganda-break koldanbaimiz
+         
+
+        /*const Kosu = (a,b) => a + b;
+        console.log(Kosu(4,6));
+
+    */ 
+   const myBank = () => {
+    let result = 0;
+    let money;
+    while (money != 0){
+        money = +prompt("aqsha");
+        if (money == 0)  break;
+    let currency = prompt("USD/EUR/KZT");
+    if (currency == 'EUR'){
+        result += money;
+    } else if (currency == 'USD'){
+        result += money * 0.85;
+    } else if (currency == 'KZT'){
+        result += money * 0.002;
+    }
+    }
+    return result;
+   }
+   alert (myBank());
+   
+
+
+
+          
+
+
+    </script>
+    
+</body>
+</html>

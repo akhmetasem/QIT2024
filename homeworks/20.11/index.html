@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let oilshem = 0;  
+
+    while (true) {
+        let olshem1 = prompt("Қашықтықты енгізіңіз:");
+        if (olshem1 == 0) {
+            break;
+        }
+       let birlik = prompt("Өлшем бірлігін енгізіңіз (метр, дециметр, километр):");
+        if (birlik === "метр") {
+            oilshem += olshem1; 
+        } else if (birlik === "дециметр") {
+            oilshem += olshem1 / 10; 
+        } else if (birlik === "километр") {
+            oilshem += olshem1 * 1000;  
+        } else {
+            alert("Қате өлшем бірлігі! Тек 'метр', 'дециметр' немесе 'километр' енгізіңіз.");
+        }
+    }
+    console.log(`Жалпы қашықтық: ${oilshem} метр.`);
+    </script>
+</body>
+</html>

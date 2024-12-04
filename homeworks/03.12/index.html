@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const city = {
+        name: "Алматы",  
+        population: 2000000, 
+        districts: [   
+        { name: "Алмалы", population: 250000 },    
+        { name: "Жетісу", population: 350000 },   
+        { name: "Медеу", population: 200000 }, 
+        { name: "Бостандық", population: 300000 },     
+    ]
+  };
+console.log(city);
+
+
+const schools = [
+    { name: "№1 мектеп", district: "Алмалы", students: 500 },
+    { name: "№2 мектеп", district: "Бостандық", students: 700 },
+];
+function addSchool(name, district, students) {
+    schools.push({ name, district, students });
+}
+function updateStudentCount(schoolName, newStudentCount) {
+    const school = schools.map(s => s.name === schoolName);
+    if (school) {
+        school.students = newStudentCount;
+    } else {
+        console.log(`Мектеп табылмады: ${schoolName}`);
+    }
+}
+addSchool("№3 мектеп", "Медеу", 600);
+updateStudentCount("№1 мектеп", 550);
+console.log(schools);
+
+const districts = [
+    { name: "Бостандық", population: 300000 },
+    { name: "Алмалы", population: 250000 },
+    { name: "Жетісу", population: 350000 },
+    { name: "Медеу", population: 200000 }
+];
+const districtNames = districts.map(district => district.name);
+console.log(districtNames);
+
+
+
+    </script>
+    
+</body>
+</html>

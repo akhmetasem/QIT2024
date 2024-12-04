@@ -8,7 +8,7 @@
 <body>
     <script>
      
-
+  //26
         /* let fruits3 = ['Apple', 'Pinapple', 'Banana', ' Orange'];
          fruits3.push('Mango');
          fruits3.push('Melon');
@@ -36,7 +36,9 @@
   let page2 = fruits.slice(2,4);
   let page3 = fruits.slice(4,6);
   console.log(`${page1} \n\n${page2}\n\n${page3}\n\n`)*/
+  //26
 
+ //27
   /*let cityes = ['Astana', 'Almaty', 'Merke', 'Taraz','Mangistau','Zaisan', 'Shu', ];
  
   cityes.unshift('Atirau');
@@ -133,13 +135,229 @@
  /*let qalalar = +prompt("Қандай қалаларда болдыңыз?");
  alert(qalalar + 'сіз осынша қалада болдыңыз!')*/
 
+ /*let kala = prompt("kai kalada boldynyz")
+
+ let mass = kala.split(", ")
+
+console.log(mass.length + " Kalada boldynyz");
+
 
  let cities = []; 
  let numberOfCities = 0; 
+*/ 
+//27
+
+//28
+  /* const fillArray = () => {
+   let array = [];
+
+   while(true){
+      let thing = prompt("Зат жаз");
+      if (thing == 'stop') break; 
+      if (isNaN(Number (thing))){
+         array.push(Number(thing));
+      } else {
+         array.push(thing);
+      }
+   }
+   return array;
+};
+console.log(fillArray());
 
 
+
+ /*let array = [1, 2, 3, 5, 6, 4];
+ for(let element of array ){// барлығын бір элемент ретінде көріп консолге  шығарып берді
+   console.log(Element);
+ }
+
+ let array1= [1, 2, 3, 5, 6, 4];
+ let result 
+ for(let element of array ){//
+   console.log(Element);
+ }
+*/
+ /*let array2 = [1, 2, 3, 5, 6, 4];
+ array.forEach(function(element) {
+   console.log(element);
+ })
+
+ let array3 = [1, 2, 3, 5, 6, 4];
+ let doubled = array3.map((element) => element *2); 
+ console.log(doubled);
+
+ let array4 = [1, 2, 3, 5, 6, 4];
+ let doubled1 = array4.map((element) => element *2); 
+ let squred = array4.map((element ) => element  * element);
+ let onSan = array.filter((element) => element > 0 );
+ let terisSan = array.filter((element) => element < 0);
+ console.log(`onSan ${onSan}`);
+ console.log( `TerisSan ${terisSan}`);
+
+ console.log(`Екі еселенен  сандар ${doubled}`);
+ console.log( `Квадратталған сандар ${squred}`);
+
+ //бір параметр болса жақша керек емес
+
+
+ let evens = array.filter(element => element % 2 == 0);
+ let odds = array.filter(element => element % 2 !== 0);
  
-    </script>
+ console.log(` жұп сандар ${evens}`);
+ console.log(` Тақ сандар ${odds}`);*/
+
+
+/* let array7 = fillArray();
+ let onSan1 = array.filter((element) => element > 0 );
+ let terisSan2 = array.filter((element) => element < 0);
+ console.log(`onSan ${onSan1}`);
+ console.log( `TerisSan ${terisSan2}`);*/
+
+
+ /*let nameList = fillArray ("Тауар енгіз");
+ let search = prompt(`Search...`);
+ let final = nameList.filter(element => 
+ element.tolowerCase().includes(search));*/
+
+
+ /*function sumOfNumbers(){
+ let numbers = fillArray("Сан");
+ let total = numbers.reduce((result, element) => result + element , 0);
+ console.log(`Sandar kosindisi: ${total}`);
+ }
+ sumOfNumbers();*/
+
+
+
+/* let numbers = fillArray('Сан');
+ function sumOfNumbers(array){
+let total = array.reduce(())
+ let total = numbers.reduce((result, element) => result + element , 0);
+ console.log(`Sandar kosindisi: ${total}`);
+ }
+ sumOfNumbers();*/
+ //28
+
+ //02.12.2024
+
+ /*let numbers = [4,7,10,3,12];
+ function moreThan( num, array){
+   return array.filter((element) => element > num);
+ } 
+ function sumOfNumbers(array){
+   return array.reduce ((total , element) => total + element,0);
+ }
+ function average (array){
+   return sumOfElements (array) / array.lenth;
+ }
+
+ console.log('барлық сандар қосындысы '   + sumOfElements(numbers));
+ console.log('Арифметикалық ортасы '   + (numbers));*/
+/*
+ function menu(){
+   while(true){
+      let choice = +prompt{
+         numbers + 
+         `\n1)Сандар қосындысын табу `\n2) 
+      }
+      switch (choice){
+         case 1 :
+            alert(sumOfElements(numbers));
+            break;
+            case 2 : 
+            alert()
+      }
+   }
+ }*/
+/*const care = {
+   brand: "tayota",
+   model: "camry",
+   year: 2020,
+   color: "black",
+   isOk: true,
+   country:"Japan",
+};
+car.isOk = false;
+car.owhers = 5;
+console.log(car)
+console.log(`${car.brand} ${car.model} көлігі ${car.country} елінде жарық көрді`) ;*/
+
+
+/*const  calculator = {
+   plus: function (a,b){
+      return a + b;
+   },
+   minus: function (a,b){
+      return a - b;
+   },
+   multi: function(a,b){
+      return a * b;
+   },
+   
+};
+
+ function menu () {
+   let num1 = +prompt('1')
+   let num2 = +prompt('1')
+   let test = prompt('minus/plus/ multi')
+   switch (test){
+      case 'minus': 
+      alert(calculator.minus(num1,num2))
+      break;
+      case 'plus': 
+      alert(calculator.plus(num1,num2))
+      break;
+      case 'multi': 
+      alert(calculator.multi(num1,num2))
+      break;
+   }
+ }
+menu()*/
+
+/*const product = {
+   name : "steralnii mashina",
+   reting: 5,
+   price: 294990,
+   discount: function (percent){
+      return this.price - (this.price * percent) / 100;
+   }
+}
+console.log(product.discount(16,99));
+*/
+/*const person = {
+   name: "Aizhan",
+   age : 24,
+   company:"kazak"
+   greet function() {
+      return `Hello ,my name is ${this.name} , I am ${this.age} years old, currently working in ${this.company}`
+   }
+}
+console.log(person.greet())*/
+
+
+/*const restaranMenu = {
+   items : ['pizza', 'shushi', 'pirozhashki', 'cola'],
+   printMEnu: 
+}
+const restaranMenu1 = {
+   items: {
+      {
+         name: "Pizza",
+         price: 2.5,
+         weight: 500;
+         ingretiends:['dough', 'pepperoni', 'cheese']
+      },
+      {
+       name:sushi;
+       price
+      }
+   }
+}*/
+
+
+
+
+ </script>
     
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [13, 56, 344, 78, 96, 80, 12, 15, 2, 3, 4, 45];
+        let result = numbers
+        .filter(num => num >= 50) 
+        .map(num => num * 2); 
+         console.log(result);
+
+
+         let numbers1 = [102, 201, 302, 430];
+         numbers.push(501, 602, 703);
+         let sum = 0;
+         numbers1.forEach(num => sum += num); 
+        console.log(sum); 
+
+        let numbers2= [10, 15, 20, 25, 30, 35];
+        let result1 = numbers
+        .map(num => num * 3)         
+        .filter(num => num <= 100);   
+        console.log(result1);  
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const book = {
+            title : 'Sen',
+            author:'Азамат Скаков',
+            pages : 350,
+            isRead:false,
+            readBook:function (){
+                return `Сіз ${this.author} авторының ${this.title} кітабын оқып жатырсыз`;
+            },
+            ToggleREadStatus : function (){
+                this.isRead = !this.isRead;
+                return this.isRead;
+            },
+            hardlevel: function (){
+                if(this.pages < 200){
+                    return "Easy"
+                }else if (this.pages > 200 && this.pages < 500){
+                    return 'Middle'
+                }else {
+                    return "Hard"
+                }
+            }
+            
+
+        }
+        console.log(book.readBook());
+        console.log(book.ToggleREadStatus ? 'Сіз осы кітапты оқығансыз': 'Сіз осы кітапты оқығансыз');
+    </script>
+    
+</body>
+</html>

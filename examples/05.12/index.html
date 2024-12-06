@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     /*  //1
+        const students = [
+            {name: 'Aidyn' ,age:23,score:78},
+            {name: 'Aidana' ,age:20,score:88},
+            {name: 'Aida' ,age:23,score:98},
+            {name: 'Aigul' ,age:26,score:58},
+            {name: 'Nurbol' ,age:18,score:68},
+            {name: 'Zarina' ,age:33,score:78},
+            {name: 'Gulim' ,age:24,score:89},
+            {name: 'Ainur' ,age:27,score:45},
+            {name: 'Asel' ,age:23,score:90},
+        ];
+        students.forEach(function(student){
+            console.log(student.name)
+        });
+        //2
+        function findOlder(){
+            return students.filter((student) => student.age >= 20);
+        }
+        console.log(findOlder());
+        //3
+        // ұпайларын 10 пайызға арттыру
+    const plusScore = () => {
+    return students.map((student) => ({
+        name: student.name,
+        age: student.age,
+        score: (student.score * (100 + 10)) / 100,
+    })); // 110%
+   };
+
+    //1000hg jogari
+    //10min-15%
+        
+    //2-тапсырма
+    const products = [
+    { name: 'product A', price: 5000 },
+    { name: 'product B', price: 500 },
+    { name: 'product C', price: 7000 },
+    { name: 'product D', price: 30000 },
+    { name: 'product E', price: 20000 },
+];
+
+// ["product A", "product B", "..."]
+function collectAllNames() {
+    return products.flatMap((product) => product.name);
+}
+
+console.log(collectAllNames());
+
+// бағасы 10мыңнан асатын тауарлар массиві
+
+const filteredProducts = products.filter((product) => product.price > 10000);
+console.log(filteredProducts)
+
+
+// Сол тауарларға 15 пайыз жеңілдік есептеу функциясы
+function discount() {
+    let newProducts = filteredProducts.map((product) => ({
+        name: product.name,
+        price: product.price * 0.85,
+    })); // 
+
+    return newProducts;
+}
+
+console.log(discount());*/
+
+/*
+//3-тапсырма
+// 1. Күнделікті тапсырмалар массиві
+const tasks = [
+  { id: 1, name: "Сабақты оқу", completed: false },
+  { id: 2, name: "Жұмысқа бару", completed: true },
+  { id: 3, name: "Спортпен айналысу", completed: false },
+  { id: 4, name: "Кітап оқу", completed: true }
+];
+
+// 2. Орындалмаған тапсырмаларды анықтау
+function getIncompleteTasks() {
+  return tasks.filter(task => task.completed === false);
+}
+
+// 3. Орындалмаған тапсырмаларды көрсетеміз
+const incompleteTasks = getIncompleteTasks();
+if (incompleteTasks.length > 0) {
+  alert("Орындалмаған тапсырмалар: " + incompleteTasks.map(task => `${task.id}: ${task.name}`).join(", "));
+} else {
+  alert("Барлық тапсырмалар орындалды.");
+}
+
+// 4. Пайдаланушыдан тапсырма нөмірін сұрап, оны орындалған деп белгілеу
+const taskNumber = +prompt("Тапсырманың нөмірін енгізіңіз (1-4):");
+if (taskNumber >= 1 && taskNumber <= tasks.length) {
+  tasks[taskNumber - 1].completed = true;
+  alert(`"${tasks[taskNumber - 1].name}" аяқталды.`);
+} else {
+  alert("Қате, дұрыс тапсырма нөмірін енгізіңіз.");
+}
+
+// 5. Тек аяқталған тапсырмаларды көрсету
+const completedTasks = tasks.filter(task => task.completed === true);
+if (completedTasks.length > 0) {
+  alert("Аяқталған тапсырмалар: " + completedTasks.map(task => `${task.name}`).join(", "));
+} else {
+  alert("Әлі аяқталған тапсырмалар жоқ.");
+}
+*/
+// 7-тапсырма
+// 1. Студенттер мәліметі
+/*const studentss = [
+  { name: "Айжан", scores: [80, 85, 90, 88] },
+  { name: "Бекзат", scores: [75, 78, 80, 82] },
+  { name: "Данияр", scores: [90, 92, 94, 95] },
+  { name: "Ерлан", scores: [70, 72, 68, 75] },
+  { name: "Гүлназ", scores: [85, 88, 90, 92] }
+];
+
+// 2. Орташа ұпайларды есептеу функциясы
+function calculateAverageScore(scores) {
+  const total = scores.reduce((sum, score) => sum + score, 0);
+  return total / scores.length;
+}
+
+// 3. Орташа ұпайды қосымша өріс ретінде қосу
+studentss.forEach(student => {
+  student.averageScore = calculateAverageScore(student.scores);
+});
+
+// 4. Орташа ұпайы 85-тен жоғары студенттерді анықтау
+const highScoringStudents = studentss.filter(student => student.averageScore > 85);
+alert("Орташа ұпайы 85-тен жоғары студенттер: " + highScoringStudents.map(student => student.name).join(", "));
+
+// 5. Барлық студенттерді орташа ұпайлар бойынша өсу ретімен сұрыптау
+studentss.sort((a, b) => a.averageScore - b.averageScore);
+
+// 6. Сұрыпталған студенттерді көрсету
+alert("Студенттер орташа ұпайлары бойынша өсу ретімен: " + studentss.map(student => `${student.name}: ${student.averageScore.toFixed(2)}`).join(", "));
+
+*/
+
+/*// Практикалық жұмыс
+
+// 1. Студенттер мәліметі
+const students1 = [];
+
+// 2. Интерактивті мәзір арқылы тапсырмаларды орындау
+function menu() {
+  const choice = prompt(
+    
+      "1. Жаңа студент қосу\n" +
+      "2. Белгілі бір студентті іздеу\n" +
+      "3. Орташа ұпайды есептеу\n" +
+      "4. Ең жоғары және төмен ұпайды тапқан студенттер\n" +
+      "5. Студенттерді ұпай бойынша сұрыптау\n" +
+      "6. Шығу"
+  );
+
+  switch (choice) {
+    case "1":
+      addStudent();
+      break;
+    case "2":
+      searchStudent();
+      break;
+    case "3":
+      calculateAverageForAllStudents();
+      break;
+    case "4":
+      findHighestAndLowestScore();
+      break;
+    case "5":
+      sortStudentsByScore();
+      break;
+    case "6":
+      alert("Жүйеден шығу.");
+      return;
+    default:
+      alert("Дұрыс таңдау енгізіңіз.");
+  }
+  menu(); // қайта мәзірді көрсету үшін
+}
+
+// 3. Жаңа студент қосу
+function addStudent() {
+  const name = prompt("Студенттің атын енгізіңіз:");
+  const age = parseInt(prompt("Студенттің жасын енгізіңіз:"));
+  const score = parseFloat(prompt("Студенттің ұпайын енгізіңіз:"));
+
+  students.push({ name, age, score });
+  alert(`${name} студенті қосылды.`);
+}
+
+// 4. Белгілі бір студентті іздеу
+function searchStudent() {
+  const searchName = prompt("Іздейтін студенттің атын енгізіңіз:");
+  const student = students.find((s) => s.name.toLowerCase() === searchName.toLowerCase());
+
+  if (student) {
+    alert(`${student.name}, Жасы: ${student.age}, Ұпайы: ${student.score}`);
+  } else {
+    alert("Студент табылмады.");
+  }
+}
+
+// 5. Орташа ұпайды есептеу барлық студенттер үшін
+function calculateAverageForAllStudents() {
+  if (students.length === 0) {
+    alert("Студенттер жоқ.");
+    return;
+  }
+  const totalScore = students.reduce((sum, student) => sum + student.score, 0);
+  const average = totalScore / students.length;
+  alert(`Орташа ұпай: ${average.toFixed(2)}`);
+}
+
+// 6. Ең жоғары және төмен ұпайды тапқан студенттер
+function findHighestAndLowestScore() {
+  if (students.length === 0) {
+    alert("Студенттер жоқ.");
+    return;
+  }
+  const highest = students.reduce((max, student) => (student.score > max.score ? student : max));
+  const lowest = students.reduce((min, student) => (student.score < min.score ? student : min));
+
+  alert(`Ең жоғары ұпайы бар студент: ${highest.name}, Ұпайы: ${highest.score}`);
+  alert(`Ең төмен ұпайы бар студент: ${lowest.name}, Ұпайы: ${lowest.score}`);
+}
+
+// 7. Студенттерді ұпай бойынша сұрыптау
+function sortStudentsByScore() {
+  if (students.length === 0) {
+    alert("Студенттер жоқ.");
+    return;
+  }
+  students.sort((a, b) => a.score - b.score);
+  alert("Студенттер ұпайы бойынша өсу ретімен сұрыпталды.");
+
+  // Қорытынды нәтиже
+  const sortedNames = students.map((s) => `${s.name}: ${s.score}`).join("\n");
+  alert("Сұрыпталған студенттер:\n" + sortedNames);
+}*/
+
+/* // Бағдарламаны бастау
+menu();
+
+
+
+
+/*
+const tasks = [
+    {id: 1, name: "English", completed: true},
+    {id: 2, name: "Spanish", completed: false},
+    {id: 3, name: "French", completed: true},
+    {id: 4, name: "Japan", completed: false},
+];
+
+function didntComplited() {
+    return tasks.filter(task => task.completed === false);
+}
+
+const incompleteTasks = didntComplited();
+if (incompleteTasks.length > 0) {
+    alert("Not completed: " + incompleteTasks.map(task => `${task.id}: ${task.name}`).join(", "));
+
+} else {
+    alert("Complete");
+}
+
+
+
+
+
+const taskNumber = +prompt("Enter a task number (1-4):");
+
+if (taskNumber >= 1 && taskNumber <= tasks.length) {
+
+    // user енгізген санды нақты элементке сілтеу
+    tasks[taskNumber - 1].completed = true;
+
+    alert(`"${tasks[taskNumber - 1].name}" checked`);
+
+} else {
+    alert("Error ,enter a valid number a task.");
+}
+
+//completedTasks массиві tasks массивінен completed статусы true болғандарды ғана алады
+const completedTasks = tasks.filter(task => task.completed);
+if (completedTasks.length > 0) {
+
+    alert("Completed tasks" + completedTasks.map(task => task.name));
+    // аяқталған тапсырмаларды алып олардың жаңа массивке салу
+} else {
+    alert("Not completed tasks ");
+}*/
+
+
+
+
+/*
+
+
+const users = [
+    { name: "Али", age: 25 },
+    { name: "Баян", age: 30 },
+    { name: "Сара", age: 20 },
+    { name: "Данияр", age: 35 },
+    { name: "Ержан", age: 18 }
+];
+
+function getAllowedUsers(users) {
+    const allowedUsers = users.filter(user => user.age > 20);
+
+    // жасы 20 асқан болса , true қайтарады
+    if (allowedUsers.length > 0) {
+        console.log("Киноға кіруге рұқсаты бар пайдаланушылар:");
+        // массивтің әрбір элементіне функция қолданады
+        allowedUsers.map(user => {
+            console.log(`${user.name}, жасы: ${user.age}`);
+        });
+    } else {
+        console.log("Кіруге рұқсат етілмейді.");
+    }
+}
+
+getAllowedUsers(users);*/
+
+//допио
+
+
+
+
+
+
+        
+
+
+
+        
+     
+        
+    </script>
+</body> 
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   /* const person = [];
+    for (let i = 0; i < 3; i++) {
+    const name = prompt("Адамның  атын енгізіңіз"); 
+    const age = +prompt("Адамның жасын енгізіңіз"); 
+
+    const person = [
+        {name:name , age:age},
+    ]
+      person.push(person);
+}; 
+    person.forEach(person => {
+    alert(`Аты: ${person.name}, Жасы: ${person.age}`);
+ }); */
+
+ 
+/*const books = [
+    { title: "Sen", author: "Azamat Skakov", year: 2024 },
+    { title: "Men", author: "Azamat Skakov", year: 2024 },
+    { title: "Tastamashi ,Ana!", author: "Baimuhanbetov Aigiz", year: 2023 }
+];
+
+
+const bookTitle = prompt("Кітап атауын енгізіңіз:");
+let bookFound = false; 
+for (let i = 0; i < books.length; i++) {
+    if (books[i].title.toLowerCase() === bookTitle.toLowerCase()) {
+        bookFound = true; // Кітап табылды
+        const newYear = prompt(`Кітаптың "${bookTitle}" жылын жаңартыңыз:`);
+        books[i].year = parseInt(newYear); 
+        alert(`"${bookTitle}" кітабының жылы "${newYear}" болып жаңартылды.`);
+        break; 
+    }
+}
+if (!bookFound) {
+    alert("Бұл кітап тізімде жоқ.");
+}
+
+let allBooksInfo = "Барлық кітаптар:\n";
+books.forEach(book => {
+    allBooksInfo += `Аты: ${book.title}, Автор: ${book.author}, Жылы: ${book.year}\n`;
+});
+alert(allBooksInfo);*/
+
+
+const students = [
+    { name: "Aii", age: 24, grade: 90 },
+    { name: "Maira", age: 25, grade: 80 },
+    { name: "Nurika", age: 18, grade: 85 },
+    { name: "Qairat", age: 45, grade: 88 },
+    { name: "Zhuldiz", age: 34, grade: 95 }
+];
+
+students.sort((a, b) => a.age - b.age)
+const youngest = students[0]; 
+const oldest = students[students.length - 1];
+alert(`Ең жас студент: ${youngest.name}, Жасы: ${youngest.age}, Бағасы: ${youngest.grade}`);
+alert(`Ең үлкен студент: ${oldest.name}, Жасы: ${oldest.age}, Бағасы: ${oldest.grade}`);
+
+
+
+    </script>
+    
+</body>
+</html>

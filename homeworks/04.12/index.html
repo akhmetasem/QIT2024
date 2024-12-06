@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const student = [
+    {
+        name:"Aizhan",
+        age:21,
+        score:[90, 90, 90]
+    },
+    {
+        name:"Mirza",
+        age:25,
+        score:[90, 70, 40]
+    },
+    {
+        name:"Aiia",
+        age:22,
+        score:[45, 80, 70]
+    },
+    {
+        name:"Aiala",
+        age:20,
+        score:[70, 80, 89]
+    },
+    {
+        name:"Aigerim",
+        age:19,
+        score:[45, 50, 60]
+    },
+    {
+        name:"Beknur",
+        age:23,
+        score:[90, 90, 90]
+    },
+    {
+        name:"Zhannur",
+        age:24,
+        score:[90, 100, 90]
+    },
+    {
+        name:"Darkhan",
+        age:23,
+        score:[90, 98, 90]
+    },
+    ];
+
+    function studentName() {
+    const student = students.mup(s => s.name == studentName1); 
+    if (student) {
+        const total = student.score.reduce((sum, student) => sum + student, 0); 
+        const average = total / student.score.length; 
+        return average.toFixed(2); 
+    } else {
+        return `Оқушы табылмады: ${studentName1}`; 
+    }
+}
+
+console.log(`Айжанның орташа бағасы: ${grade("Aizhan")}`);
+console.log(`Мырзаның орташа бағасы: ${grade("Mirza")}`);
+console.log(`Айяның орташа бағасы: ${grade("Aiia")}`);
+console.log(`Аяланың орташа бағасы: ${grade("Aiala")}`);
+console.log(`Айгерімнің орташа бағасы: ${grade("Aigerim")}`);
+console.log(`Бекнұрдың орташа бағасы: ${grade("Beknur")}`);
+console.log(`Жаннұрдың орташа бағасы: ${grade("Zhannur")}`);
+console.log(`Дарханның орташа бағасы: ${grade("Darkhan")}`);
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -51,7 +51,7 @@
     ];
 
     function studentName() {
-    const student = students.mup(s => s.name == studentName1); 
+    const student = students.map(s => s.name == studentName1); 
     if (student) {
         const total = student.score.reduce((sum, student) => sum + student, 0); 
         const average = total / student.score.length; 

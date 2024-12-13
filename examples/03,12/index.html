@@ -87,31 +87,57 @@
    };
 console.log(team1.members1.flatMap (member => member1 ))*/
 
-
+/*
 const classroom = {
     name: 'QIT243',
-    aqparat:[
-        {name:'Nar',age:19, pan: ['IT', 'English']},
-        {name:'Aidana', age:18,pan: ['IT', 'English']},
-        {name:'Asem' ,age:18,pan: ['PI', 'Bio'] },
-        {name:'Erkebulan', age:18, pan: ['Gegragr', 'English']},
-        {name:'Azamat' ,age:16, pan: ['IT', 'English']},
-        {name:'Mariam', age :18, pan: ['Turik', 'English']},
-        {name:'Tolganai', age :18, pan: ['Turik', 'English']},
-        {name:'Kama', age :21, pan: ['Arab', 'IT']},
-        {name:'Tolganai', age :18, pan: ['Turik', 'English']},
-        {name:'Kama', age :21, pan: ['Arab', 'IT']},
-        {name:'Tolganai', age :18, pan: ['Turik', 'English']},
-        {name:'Kama', age :21, pan: ['Arab', 'IT']},
-    ]
-    listHobbies: function(){
-        return this.hobbies.join ('\n')
-}
-function class () {
-        return user.aqparat.filter(aqparat => aqparat.length < 21)
+    aqparat: [
+        { name: 'Nar', age: 19, pan: ['IT', 'English'] },
+        { name: 'Aidana', age: 18, pan: ['IT', 'English'] },
+        { name: 'Asem', age: 18, pan: ['PI', 'Bio'] },
+        { name: 'Erkebulan', age: 18, pan: ['Geography', 'English'] },
+        { name: 'Azamat', age: 16, pan: ['IT', 'English'] },
+        { name: 'Mariam', age: 18, pan: ['Turkish', 'English'] },
+        { name: 'Tolganai', age: 18, pan: ['Turkish', 'English'] },
+        { name: 'Kama', age: 21, pan: ['Arabic', 'IT'] },
+        { name: 'Tolganai', age: 18, pan: ['Turkish', 'English'] },
+        { name: 'Kama', age: 21, pan: ['Arabic', 'IT'] },
+        { name: 'Tolganai', age: 18, pan: ['Turkish', 'English'] },
+        { name: 'Kama', age: 21, pan: ['Arabic', 'IT'] },
+    ],*/
+/*
+    // List all hobbies (fixed the reference to "pan" instead of "hobbies")
+    listHobbies: function () {
+        return this.aqparat.flatMap(person => person.pan).join('\n');
+    },
+
+    // Function to filter people under 21 years of age
+    filterUnder21: function () {
+        return this.aqparat.filter(person => person.age < 21);
     }
-    console.log(class())
-console.log(classroom.aqparat.flatMap (aqparat => aqparat ));
+};
+
+// Call the filter function and log the result
+console.log(classroom.filterUnder21());
+
+// List hobbies for all people in the classroom
+console.log(classroom.listHobbies());
+
+{ name: 'Ali A', age: 23, score: 80 },
+    { name: 'Ali B', age: 25, score: 60 },
+    { name: 'Ali C', age: 17, score: 55 },
+    { name: 'Ali D', age: 18, score: 87 },
+];
+
+// ұпайларын 10 пайызға арттыру
+
+const plusScore = () => {
+    return students.map((student) => ({
+        name: student.name,
+        age: student.age,
+        score: (student.score * (100 + 10)) / 100,
+    })); // 110%
+};*/
+
     </script>
     
 </body>

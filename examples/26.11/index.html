@@ -24,14 +24,16 @@
     */
     
 
-  /* let numbers = [23, 34, 45, 26, 90, 89, 50];
+  /*let numbers = [23, 34, 45, 26, 90, 89, 50];
    let max = 0;
    for (let i = 0; i < numbers.length; i++){
     if (max < numbers[i])
      max = numbers[i];
-    
-   }*/
-  /*let fruits = [ 'watermelon', 'apple', 'peach' ,' orange','pinapple', 'cherry '];
+   }
+   console.log(max);*/
+
+
+ /* let fruits = [ 'watermelon', 'apple', 'peach' ,' orange','pinapple', 'cherry '];
   let page1 = fruits.slice(0,2);
   let page2 = fruits.slice(2,4);
   let page3 = fruits.slice(4,6);
@@ -144,7 +146,7 @@ console.log(mass.length + " Kalada boldynyz");
 
  let cities = []; 
  let numberOfCities = 0; 
-*/ 
+*/
 //27
 
 //28
@@ -171,31 +173,33 @@ console.log(fillArray());
    console.log(Element);
  }
 
- let array1= [1, 2, 3, 5, 6, 4];
- let result 
- for(let element of array ){//
-   console.log(Element);
- }
+ let array1 = [1, 2, 3, 5, 6, 4];
+for (let element of array1) { 
+  console.log(element);
+}
+
 */
  /*let array2 = [1, 2, 3, 5, 6, 4];
- array.forEach(function(element) {
-   console.log(element);
- })
+array2.forEach(function(element) {
+  console.log(element);
+});
+
 
  let array3 = [1, 2, 3, 5, 6, 4];
  let doubled = array3.map((element) => element *2); 
  console.log(doubled);
 
- let array4 = [1, 2, 3, 5, 6, 4];
- let doubled1 = array4.map((element) => element *2); 
- let squred = array4.map((element ) => element  * element);
- let onSan = array.filter((element) => element > 0 );
- let terisSan = array.filter((element) => element < 0);
- console.log(`onSan ${onSan}`);
- console.log( `TerisSan ${terisSan}`);
+ let array4 = [1, 2, 3, 5, 6, 4, -1, -2];  // Мысал үшін теріс сандар қосылды
+let doubled1 = array4.map((element) => element * 2); 
+let squred = array4.map((element) => element * element);
+let onSan = array4.filter((element) => element > 0);
+let terisSan = array4.filter((element) => element < 0);
 
- console.log(`Екі еселенен  сандар ${doubled}`);
- console.log( `Квадратталған сандар ${squred}`);
+console.log(`OnSan: ${onSan}`);  // Позитивті сандар
+console.log(`TeriSsan: ${terisSan}`);  // Теріс сандар
+console.log(`Eki eselenen sандар: ${doubled1}`);  // Екі еселенген сандар
+console.log(`Kvadratталған сандар: ${squred}`);  // Квадратталған сандар
+
 
  //бір параметр болса жақша керек емес
 
@@ -236,39 +240,110 @@ let total = array.reduce(())
  console.log(`Sandar kosindisi: ${total}`);
  }
  sumOfNumbers();*/
+
+ // fillArray функциясы
+/*const fillArray = () => {
+  let array = [];
+  while (true) {
+    let thing = prompt("Зат жаз");
+    if (thing === 'stop') break; 
+    if (!isNaN(Number(thing))) { // Егер нәрсе сан болса, оны санға түрлендіреміз
+      array.push(Number(thing));
+    } else {
+      array.push(thing); // Егер нәрсе сан болмаса, оны мәтін ретінде қосамыз
+    }
+  }
+  return array;
+};
+
+// Массивті толтыру
+let array7 = fillArray();
+let onSan1 = array7.filter((element) => element > 0);  // Оң сандар
+let terisSan2 = array7.filter((element) => element < 0);  // Теріс сандар
+
+console.log(`Оң сандар: ${onSan1}`);
+console.log(`Теріс сандар: ${terisSan2}`);
+
+// Іздеу функциясы
+let nameList = fillArray("Тауар енгіз");
+let search = prompt("Search...");
+let final = nameList.filter(element => 
+  element.toLowerCase().includes(search.toLowerCase())); // Мәтіндерді кіші әріппен салыстыру
+
+console.log(`Ізделген нәтижелер: ${final}`);
+
+// Сандардың қосындысын есептеу
+function sumOfNumbers() {
+  let numbers = fillArray("Сан");
+  let total = numbers.reduce((result, element) => result + element, 0);
+  console.log(`Сандар қосындысы: ${total}`);
+}
+sumOfNumbers();
+*/
  //28
 
  //02.12.2024
 
- /*let numbers = [4,7,10,3,12];
- function moreThan( num, array){
-   return array.filter((element) => element > num);
- } 
- function sumOfNumbers(array){
-   return array.reduce ((total , element) => total + element,0);
- }
- function average (array){
-   return sumOfElements (array) / array.lenth;
- }
+ /*let numbers = [4, 7, 10, 3, 12];
 
- console.log('барлық сандар қосындысы '   + sumOfElements(numbers));
- console.log('Арифметикалық ортасы '   + (numbers));*/
+// Функция: берілген саннан үлкен сандарды фильтрациялау
+function moreThan(num, array) {
+  return array.filter((element) => element > num);
+}
+
+// Функция: сандардың қосындысын есептеу
+function sumOfNumbers(array) {
+  return array.reduce((total, element) => total + element, 0);
+}
+
+// Функция: сандардың арифметикалық ортасын есептеу
+function average(array) {
+  return sumOfNumbers(array) / array.length;
+}
+
+// Нәтижелерді шығару
+console.log('Барлық сандар қосындысы: ' + sumOfNumbers(numbers));  // 4 + 7 + 10 + 3 + 12 = 36
+console.log('Арифметикалық ортасы: ' + average(numbers));  // 36 / 5 = 7.2
+*/
 /*
- function menu(){
-   while(true){
-      let choice = +prompt{
-         numbers + 
-         `\n1)Сандар қосындысын табу `\n2) 
-      }
-      switch (choice){
-         case 1 :
-            alert(sumOfElements(numbers));
-            break;
-            case 2 : 
-            alert()
-      }
-   }
- }*/
+let numbers = [4, 7, 10, 3, 12];  // Мысал үшін массив
+
+// Сандардың қосындысын есептеу функциясы
+function sumOfNumbers(array) {
+  return array.reduce((total, element) => total + element, 0);
+}
+
+// Мәзірді көрсету және таңдауды өңдеу функциясы
+function menu() {
+  while (true) {
+    let choice = +prompt(
+      `Сандар: ${numbers}\n` +
+      `\n1) Сандар қосындысын табу` + 
+      `\n2) Арифметикалық ортаны табу` + 
+      `\n3) Шығу`
+    );
+
+    switch (choice) {
+      case 1:
+        alert('Сандар қосындысы: ' + sumOfNumbers(numbers));
+        break;
+      case 2:
+        alert('Арифметикалық орта: ' + (sumOfNumbers(numbers) / numbers.length));
+        break;
+      case 3:
+        alert('Бағдарлама аяқталды!');
+        return; // Бағдарламадан шығады
+      default:
+        alert('Қате таңдау, қайтадан таңдаңыз!');
+        break;
+    }
+  }
+}
+
+// Мәзірді шақыру
+menu();
+
+*/
 /*const care = {
    brand: "tayota",
    model: "camry",
@@ -283,36 +358,49 @@ console.log(car)
 console.log(`${car.brand} ${car.model} көлігі ${car.country} елінде жарық көрді`) ;*/
 
 
-/*const  calculator = {
-   plus: function (a,b){
+/*const calculator = {
+   plus: function (a, b) {
       return a + b;
    },
-   minus: function (a,b){
+   minus: function (a, b) {
       return a - b;
    },
-   multi: function(a,b){
+   multi: function (a, b) {
       return a * b;
    },
-   
 };
 
- function menu () {
-   let num1 = +prompt('1')
-   let num2 = +prompt('1')
-   let test = prompt('minus/plus/ multi')
-   switch (test){
-      case 'minus': 
-      alert(calculator.minus(num1,num2))
-      break;
-      case 'plus': 
-      alert(calculator.plus(num1,num2))
-      break;
-      case 'multi': 
-      alert(calculator.multi(num1,num2))
-      break;
+function menu() {
+   let num1 = +prompt('Алғашқы санды енгізіңіз:'); // Бірінші санды сұрау
+   let num2 = +prompt('Екінші санды енгізіңіз:'); // Екінші санды сұрау
+
+   // Қате енгізу жағдайын тексеру
+   if (isNaN(num1) || isNaN(num2)) {
+      alert('Қате! Сіз сандарды дұрыс енгізуіңіз керек.');
+      return;
    }
- }
-menu()*/
+
+   let test = prompt('Қандай операция жасағыңыз келеді? "minus", "plus", "multi" таңдаңыз:');
+   
+   // Операция таңдауы үшін тексеру
+   switch (test.toLowerCase()) { // Кіші әріппен салыстыру
+      case 'minus': 
+         alert(calculator.minus(num1, num2));
+         break;
+      case 'plus': 
+         alert(calculator.plus(num1, num2));
+         break;
+      case 'multi': 
+         alert(calculator.multi(num1, num2));
+         break;
+      default:
+         alert('Қате! Дұрыс операция таңдаңыз: "minus", "plus" немесе "multi"');
+         break;
+   }
+}
+
+menu();
+*/
 
 /*const product = {
    name : "steralnii mashina",
@@ -335,9 +423,12 @@ console.log(product.discount(16,99));
 console.log(person.greet())*/
 
 
-/*const restaranMenu = {
-   items : ['pizza', 'shushi', 'pirozhashki', 'cola'],
-   printMEnu: 
+/*
+const restaranMenu = {
+   items : ['pizza', 'sushi', 'pirozhashki', 'cola'],
+   printMenu: function() {
+      console.log(this.items.join(", "));
+   }
 }
 const restaranMenu1 = {
    items: {
@@ -352,7 +443,24 @@ const restaranMenu1 = {
        price
       }
    }
-}*/
+}
+   const restaranMenu1 = {
+   items: [
+      {
+         name: "Pizza",
+         price: 2.5,
+         weight: 500,
+         ingredients: ['dough', 'pepperoni', 'cheese']
+      },
+      {
+         name: "Sushi",
+         price: 5,
+         weight: 300,
+         ingredients: ['rice', 'seaweed', 'fish']
+      }
+   ]
+}
+*/
 
 
 
